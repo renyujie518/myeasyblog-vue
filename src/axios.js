@@ -3,8 +3,10 @@ import Element from 'element-ui'
 import router from './router'
 import store from './store'
 
-
-axios.defaults.baseURL = "http://localhost:8081";
+//本机测试的时候使用
+// axios.defaults.baseURL = "http://localhost:8081";
+//虚机部署的时候要改为虚机的ip地址
+axios.defaults.baseURL = "http://123.57.180.71:8081";
 //前置拦截（发起请求前的处理，比如可以添加请求头header等等  本实验没有用到）
 axios.interceptors.request.use(config => {
     return config;
